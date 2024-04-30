@@ -1,0 +1,4 @@
+name: MMtuning
+channels:
+  - defaults
+prefix: D:\anaconda\envs\MMtuning

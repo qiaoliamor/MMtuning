@@ -8,5 +8,5 @@ Start by installing the required packages listed in the environment.yml file. Th
 
 ### Download Datasets: 
 You can download either the ScienceQA or Visual7W dataset for testing purposes. The default code is configured to load the ScienceQA dataset.  
-ScienceQA: https://scienceqa.github.io/  
-Visual7W:https://ai.stanford.edu/~yukez/visual7w/
+- ScienceQA: https://scienceqa.github.io/  
+- Visual7W:https://ai.stanford.edu/~yukez/visual7w/

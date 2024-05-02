@@ -75,11 +75,11 @@ VQA_dataset_train = VQADataset(merged_data_train, transform=transform)
 train_loader = DataLoader(VQA_dataset_train, batch_size=batch_size, shuffle=True)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
-optimizer_llm= AdamW(model.parameters(), lr=1e-4, weight_decay=1e-8)
+optimizer_llm= AdamW(model.parameters(), lr=1e-5, weight_decay=1e-8)
 
 epochs = 3
 total_steps = len(train_loader) * epochs
-scheduler_llm= get_cosine_schedule_with_warmup(optimizer_llm, num_warmup_steps = 1000, num_training_steps = total_steps)
+scheduler_llm= get_cosine_schedule_with_warmup(optimizer_llm, num_warmup_steps = 4000, num_training_steps = total_steps)
 
 train_losses = []
 for epoch in range(epochs):

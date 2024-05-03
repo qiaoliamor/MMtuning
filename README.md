@@ -1,10 +1,16 @@
-# MMtuning（Under Renovation）
+# MMtuning
 PEFT framework tailored for multimodal large language models（MM-LLMs）based
 
 ## Getting Started:
 
 ### Installation: 
-Start by installing the required packages listed in the environment.yml file. Then, proceed to install our modified Python package with MMtuning-enabled PEFT.
+Start by installing the required packages listed in the environment.yml file and then install our modified Python package with MMtuning-enabled PEFT.
+```bash
+conda env create -f environment.yml
+
+## pip install PEFT-MMtuning
+pip install /path/to/your/local/package/PEFT-MMtuning/dist/peft-0.6.3.dev0.tar.gz
+```
 
 ### Download Datasets: 
 You can download either the ScienceQA or Visual7W dataset for testing purposes. The default code is configured to load the ScienceQA dataset.  

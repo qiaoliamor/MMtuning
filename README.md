@@ -6,7 +6,7 @@ PEFT framework tailored for multimodal large language models（MM-LLMs）based
 ### Installation: 
 Start by installing the required packages listed in the environment.yml file and then install our modified Python package with MMtuning-enabled PEFT.
 ```bash
-conda env create -f environment.yml
+conda create --name <env> --file environment.yml
 
 ## pip install PEFT-MMtuning
 pip install /path/to/your/local/package/PEFT-MMtuning/dist/peft-0.6.3.dev0.tar.gz

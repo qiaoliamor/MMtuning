@@ -2,6 +2,7 @@ import torch
 import json
 import os
 import json
+import random
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
@@ -11,6 +12,17 @@ from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader
 from .VQA_dataload import VQADataset
 from .blip2_mmtuning import Blip2MMtuning
+
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+
+set_seed(42)
 
 # Please specify the folder for the dataset
 data_folder = "problems.json"

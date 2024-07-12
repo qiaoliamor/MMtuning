@@ -27,7 +27,6 @@ class VQADataset(Dataset):
         prompt = sample["prompt"]
         topics = sample['topic']
 
-        # 如果有 transform 函数，则对图像进行预处理
         images = []
         for img_pth in images_paths:
             with Image.open(img_pth) as image:

@@ -38,9 +38,7 @@ class VQADataset(Dataset):
                 images.append(image)
 
         if len(images)>1:
-             # 将图像在第三维度（通道维度）上拼接
             cated_images = torch.cat(images, dim=-1)
-            # 调整整个拼接后的图像大小为224x224
             cated_images = F.resize(cated_images, (224, 224))
         else:
             cated_images = images[0]

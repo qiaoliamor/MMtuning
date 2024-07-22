@@ -72,9 +72,9 @@ for key in pretrained_parameters:
     if key in lora_parameters:
         lora_parameters[key] = pretrained_parameters[key]    
 
-for key in trainable_parameters_pretrained :
-    if key in lora_parameters:
-        lora_parameters[key] = trainable_parameters_pretrained[key]    
+for name, param in trainable_parameters_pretrained.items():
+    if name in lora_parameters:
+        lora_parameters[name] = param.data 
 
 model.load_state_dict(lora_parameters)
 

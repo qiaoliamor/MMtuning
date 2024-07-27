@@ -129,7 +129,7 @@ class Blip2MMtuning(nn.Module):
         t5_config = T5Config.from_pretrained(t5_model)
         t5_config.dense_act_fn = "gelu"
         self.t5_model = T5ForConditionalGeneration.from_pretrained(
-            t5_model, config=t5_config, torch_dtype=torch.bfloat16
+            t5_model, config=t5_config, torch_dtype=dtype_llm
         )
         
 

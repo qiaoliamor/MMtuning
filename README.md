@@ -1,5 +1,5 @@
 # MMtuning
-PEFT framework tailored for multimodal large language models（MM-LLMs）
+MMtuning: An Advanced Multi-adapter Framework for Efficient Multimodal Large Language Models Fine-Tuning (KSEM 2025)
 
 ## Getting Started:
 
